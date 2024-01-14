@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
+import {CategoryList,Category} from "./utils/categories";
 
 export default function Products() {
   const [data, setData] = useState([]);
@@ -19,6 +20,7 @@ export default function Products() {
         console.log(filter);
       }
       return () => {
+        
         componentMounted = false;
       };
     };
@@ -61,25 +63,34 @@ export default function Products() {
           </button>
           <button
             className="btn btn-outline-dark me-2"
-            onClick={() => filterProduct("men's clothing")}
+            onClick={() => {
+              filterProduct(CategoryList.men.name.toString())
+            }}
           >
             Men
           </button>
           <button
             className="btn btn-outline-dark me-2"
-            onClick={() => filterProduct("women's clothing")}
+            onClick={() => {
+              filterProduct(CategoryList.Women.name.toString())
+            }}
           >
             Women
           </button>
           <button
             className="btn btn-outline-dark me-2"
-            onClick={() => filterProduct("jewelery")}
+            onClick={() => {
+              filterProduct(CategoryList.Jewelry.toString())
+            }}
           >
             Jewelery
           </button>
           <button
             className="btn btn-outline-dark me-2"
-            onClick={() => filterProduct("electronics")}
+            onClick={() => {
+
+              filterProduct(CategoryList.Electronics.name.toString())
+            }}
           >
             Electronincs
           </button>

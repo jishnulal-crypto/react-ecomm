@@ -10,10 +10,11 @@ class Category {
   
   class CategoryList {
     static All = new Category("All");
-    static Men = new Category("Men's Clothing");
-    static Women = new Category("Women's Clothing");
-    static Jewelry = new Category("Jewelry");
-    static Electronics = new Category("Electronics");
+    static Men = new Category("men's clothing");
+    static Women = new Category("women's clothing");
+    static Jewelry = new Category("jewelery");
+    static Electronics = new Category("electronics");
+    
   
     static categories = [
       CategoryList.All,
@@ -34,3 +35,4 @@ class Category {
   
 
   
+  export { Category, CategoryList };
