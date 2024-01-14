@@ -43,6 +43,7 @@ export default function Products() {
     );
   };
   const filterProduct = (cat) => {
+    console.log(cat);
     const updatedList = data.filter((x) => x.category === cat);
     setFilter(updatedList);
   };
@@ -52,7 +53,9 @@ export default function Products() {
         <div className="buttons d-flex justify-content-center mb-5 pb-5">
           <button
             className="btn btn-outline-dark me-2"
-            onClick={() => setFilter(data)}
+            onClick={() =>{
+              setFilter(data)
+            }}
           >
             All
           </button>
